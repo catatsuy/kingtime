@@ -16,7 +16,7 @@ type Attendance struct {
 
 func main() {
 	attendances := make([]Attendance, 0, 10)
-	re := regexp.MustCompile(`kintai: ([0-9]{2}):([0-9]{2}) *[-]? *([0-9]{2}):([0-9]{2})`)
+	re := regexp.MustCompile(`kintai: ([0-9]{1,2}):([0-9]{2}) *[-]? *([0-9]{1,2}):([0-9]{2})`)
 	s := bufio.NewScanner(os.Stdin)
 	aTmp := Attendance{}
 	for s.Scan() {
